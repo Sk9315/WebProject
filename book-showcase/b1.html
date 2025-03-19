@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>book1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+   <style type="text/css">
+    @keyframes colorTransition {
+        0% { background: #96577a; }
+        25% { background: #c0ac96; }
+        50% { background: #d6df77; }
+        75% { background: #b35f68; }
+        100% { background: #9cc5cf; }
+    }
+    body {
+        animation: colorTransition 10s linear infinite alternate;
+    }
+    .book-page {
+        align-items: center;
+        background-color: white;
+        margin: auto;
+        width: 600px;
+        max-width: 90%;
+        padding: 20px;
+    }
+    summary {
+        font-size: 15px;
+        font-weight: bold;
+    }
+    img{
+        width: 200px;
+        height: 300px;
+    }
+    details {
+        margin-bottom: 10px;
+    }
+    .feedback {
+        background-color: #dfd9d9;
+        border-radius: 5px;
+        margin: auto;
+        padding: 15px;
+    }
+    .heading {
+        height: 100px;
+        width: 97%;
+        text-align: center;
+        margin: 20px auto;
+        padding: 10px;
+    }
+    footer {
+      background-color: rgb(45, 56, 42);
+      color: white;
+      text-align: center;
+      font-size: 14px;
+      padding: 10px;
+      position:relative;
+      
+      margin-top: 20px; 
+  }
+
+    
+    @media screen and (max-width: 768px) {
+        .book-page {
+            width: 100%;
+            padding: 10px;
+        }
+        .feedback {
+            width: 90%;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    
+    @media screen and (orientation: landscape) and (max-width: 1024px) {
+        .book-page {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        img {
+            max-width: 40%;
+            height: auto;
+        }
+        .feedback {
+            width: 45%;
+        }
+        section {
+            flex: 1 1 50%;
+        }
+    }
+   </style>
+</head>
+<body>
+    <h3 class="heading bg-black fw-bold text-white">Book Showcase: Book 1 Details</h3>
+    <div class="book-page">
+        <h3 class="fw-bold">Book 1: Shrimad Bhagwat Geeta</h3>
+        <div>
+            <img src="/PW-IOI/Web-project1/book-showcase/Public/img/book1.png" alt="" class="mt-4">
+        </div>
+        <section class="mt-4 p-2">
+            <details><summary>Genre</summary><ul><li>Spirituality</li><li>Yoga</li></ul></details>
+            <details><summary>Index Page</summary><ul><li>Introduction</li><li>Chapter 1: Overview</li><li>Chapter 2: Yoga of Knowledge</li></ul></details>
+            <details><summary>Author</summary><ul><li>Ved Vyas</li></ul></details>
+            <details><summary>Importance</summary><ul><li>Technology</li><li>Education</li></ul></details>
+            <details><summary>Purchase Links</summary>
+                <ul>
+                    <li><a href="https://www.amazon.in/..." target="_blank">Amazon</a></li>
+                    <li><a href="https://www.flipkart.com/..." target="_blank">Flipkart</a></li>
+                </ul>
+            </details>
+           
+            <div class="mt-4 w-75"> 
+                <h4 class="fw-bold">Feedback Form</h4>
+                <form class="feedback m-5">
+                    <label for="Name">Name:</label><br>
+                    <input class="w-100" type="text" name="Name"><br>
+                    <label for="Feedback">Feedback:</label><br>
+                    <textarea class="w-100 " name="Feedback" style="resize:none" ></textarea><br>
+                    <button type="submit" class="btn btn-primary w-100">Submit</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+
+    <footer>
+      <div>
+          <span class="bi bi-c-circle"> Book Showcase | All rights reserved</span>
+      </div>
+  </footer>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

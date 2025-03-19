@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore a wide range of books in our Book Showcase. Discover new titles and authors.">
+    <meta name="keywords" content="books, reading, literature, book showcase">
+    <meta name="author" content="Your Name">
+    <title>Book Showcase</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+          rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style type="text/css">
+       
+        @keyframes colorTransition {
+            0% { background: #96577a; }
+            25% { background: #c0ac96; }
+            50% { background: #d6df77; }
+            75% { background: #b35f68; }
+            100% { background: #9cc5cf; }
+        }
+       
+
+        .main-container {
+            width: 100%;
+            min-height: 100vh;
+            animation: colorTransition 10s linear infinite alternate;
+        }
+        main{
+            min-height: calc(100vh - 170px);
+            padding-bottom: 30px;
+        }
+
+        .heading {
+            margin-top: 4px;
+            background-color: rgb(57, 58, 57);
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+
+        header {
+            background-color: black;
+            text-align: right;
+            padding: 6px;
+            margin-top: 0px;
+        }
+
+        footer {
+            background-color: rgb(45, 56, 42);
+            color: white;
+            text-align: center;
+            font-size: 14px;
+            padding: 10px;
+            position:relative;
+           
+            margin-top: 20px; 
+        }
+
+        .flip-box {
+            background-color: transparent;
+            width: 200px;
+            height: 300px;
+            perspective: 1000px;
+            margin-bottom: 30px;
+        }
+
+        .flip-box-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 2s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-box:hover .flip-box-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-box-front, .flip-box-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        }
+
+        .flip-box-front {
+            background-color: #bbb;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .flip-box-front img {
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            border-radius: 10px;
+        }
+
+        .flip-box-back {
+            background-color: grey;
+            color: whitesmoke;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transform: rotateY(180deg);
+        }
+
+        /* MEDIA QUERIES */
+
+        /* Tablets and Mobile Phones */
+        @media screen and (max-width: 1024px) {
+            .main-box {
+                display: flex;
+                flex-direction: column; 
+                align-items: center; 
+                gap: 20px; 
+            }
+
+            .flip-box {
+                width: 250px; 
+                height: 375px; 
+                margin-bottom: 20px;
+            }
+
+            .flip-box-back {
+                font-size: 22px; 
+            }
+        }
+
+        /* Mobile Phones */
+        @media screen and (max-width: 768px) {
+            header{
+                  position: sticky;
+            }
+            .flip-box {
+                width: 280px; 
+                height: 420px; 
+            }
+
+            .flip-box-back {
+                font-size: 24px; 
+            }
+
+            .heading h4 {
+                font-size: 18px;
+            }
+
+            footer {
+                font-size: 12px;
+                padding: 8px;
+                position: relative;
+            }
+        }
+    </style>
+</head>
+<body class="main-container">
+    <div class="heading">
+        <h4>Welcome to Book Showcase</h4>
+    </div>
+    <header>
+        <div>
+            <a href="#Home" class="text-white">Home</a>
+        </div>
+    </header>
+    <main class="mt-3  ">
+        <h5 class="ms-3">Explore Books</h5>
+        <div class="main-box d-flex flex-wrap justify-content-evenly mt-4" id="Home">
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="/PW-IOI/Web-project1/book-showcase/Public/img/book1.png" alt="Cover of Book 1: Title of the Book">
+                    </div>
+                    <div class="flip-box-back">
+                        <a href="b1.html" aria-label="Details about Book 1">Click for Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="/PW-IOI/Web-project1/book-showcase/Public/img/book2.png" alt="Cover of Book 2: Title of the Book">
+                    </div>
+                    <div class="flip-box-back">
+                        <a href="b2.html" aria-label="Details about Book 2">Click for Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="/PW-IOI/Web-project1/book-showcase/Public/img/book3.png" alt="Cover of Book 3: Title of the Book">
+                    </div>
+                    <div class="flip-box-back">
+                        <a href="b3.html" aria-label="Details about Book 3">Click for Details</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <span class="bi bi-c-circle"> Book Showcase | All rights reserved</span>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
